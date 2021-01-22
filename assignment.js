@@ -1,19 +1,19 @@
 // problem solving-1 kilo to meter
 function kilometerToMeter(kilometer) {
   if (kilometer < 0) {
-    return 'Meter to be positive value';
+    return 'Kilometer to be positive value!';
   } else if (kilometer >= 0) {
     var meter = kilometer * 1000;
     return meter;
   } else {
-    return 'Input only a positive valid number';
+    return 'Input only a positive valid number!';
   }
 }
 
 // problem solving-2 budget calculator
 function budgetCalculator(watch, phone, laptop) {
   if (watch < 0 || phone < 0 || laptop < 0) {
-    return 'Price to be positive value';
+    return 'Price to be positive value!';
   } else if (watch >= 0 || phone >= 0 || laptop >= 0) {
     var watchPrice = watch * 50;
     var phonePrice = phone * 100;
@@ -21,7 +21,7 @@ function budgetCalculator(watch, phone, laptop) {
     var total = watchPrice + phonePrice + laptopPrice;
     return total;
   } else {
-    return 'Quantity to be in number value';
+    return 'Quantity to be in positive number value!';
   }
 }
 
@@ -35,24 +35,26 @@ function hotelCost(days) {
     var remainingDays = days - 10;
     var restCost = remainingDays * 80;
     return cost + restCost;
-  } else {
+  } else if (days >= 20) {
     var cost = 10 * 100;
     var restCost = 10 * 80;
     var restDays = days - 20;
     var newCost = restDays * 50;
     var totalCost = cost + restCost + newCost;
+    return totalCost;
+  } else {
+    return 'Input number datatype!';
   }
-  return totalCost;
 }
 
 // problem solving-4 to find largest elemet from an array
-function megaFriend(arr) {
+function megaFriend(longestName) {
   var element = 0;
   var longest;
-  for (var i = 0; i < arr.length; i++) {
-    if (arr[i].length > element) {
-      var element = arr[i].length;
-      longest = arr[i];
+  for (var i = 0; i < longestName.length; i++) {
+    if (longestName[i].length > element) {
+      var element = longestName[i].length;
+      longest = longestName[i];
     }
   }
   return longest;
