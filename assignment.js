@@ -1,3 +1,5 @@
+// https://github.com/arpan-jo/JS-assignment
+
 // problem solving-1 kilo to meter
 function kilometerToMeter(kilometer) {
   if (kilometer < 0) {
@@ -28,7 +30,9 @@ function budgetCalculator(watch, phone, laptop) {
 // problem solving-3 hotel cost
 function hotelCost(days) {
   var cost = 0;
-  if (days <= 10) {
+  if (days < 0) {
+    return 'Input valid positive number';
+  } else if (days <= 10) {
     return days * 100;
   } else if (days <= 20) {
     var cost = 10 * 100;
